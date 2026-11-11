@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEGURIDAD Y PRIVACIDAD: Evitar que Google u otros buscadores indexen esta carta o sus fotos -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <title>Tu Hora Dorada · Un adiós desde el orgullo y la gratitud</title>
+  
+  <!-- Tipografías de Google Fonts: Cormorant Garamond, Plus Jakarta Sans y Patrick Hand (estilo manuscrito scrapbook Up) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- CONTENEDOR DE FOTOS DIFUMINADAS EN EL FONDO (CINEMATIC BACKGROUND) -->
+  <div class="bg-slideshow-container" id="bgSlideshow">
+    <div class="bg-slide active" id="bgSlideA"></div>
+    <div class="bg-slide" id="bgSlideB"></div>
+  </div>
+  <div class="bg-slideshow-overlay" id="bgSlideshowOverlay"></div>
+
+  <!-- Capa de textura sutil de lienzo -->
+  <div class="canvas-grain-overlay"></div>
+
+  <!-- Partículas sutiles de luz ámbar y polvo dorado -->
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- Barra de progreso superior -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Audio de fondo (Canción JVKE - Golden Hour) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/audio/JVKE%20-%20Golden%20Hour%20(Sub.%20Espa%C3%B1ol%20%2B%20Lyrics).mp3" type="audio/mpeg">
+    <source src="assets/audio/cancion.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Controlador flotante de música estilo Golden Hour -->
+  <aside class="audio-widget" id="audioWidget" title="Controlar música de fondo">
+    <button class="audio-btn" id="audioToggleBtn" aria-label="Reproducir o pausar música">
+      <div class="sound-bars" id="soundBars">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="audio-text-group">
+        <span class="audio-tag">it's your golden hour</span>
+        <span class="audio-label" id="audioLabel">Música pausada</span>
+      </div>
+    </button>
+  </aside>
+
+  <!-- Pantalla de bienvenida / Portal de Entrada -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-card">
+      <div class="painting-stamp">
+        <span class="golden-badge">es tu hora</span>
+      </div>
+      <span class="intro-subtitle">UN ADIÓS NACIDO DESDE LA MEMORIA, LA GRATITUD Y LA VERDAD</span>
+      <h1 class="intro-title">Para ti, con la verdad del corazón</h1>
+      <p class="intro-text">
+        Este espacio guarda las palabras que necesitaba decirte y los instantes que siempre guardaré con cariño. Tómate tu tiempo y permite que la música te acompañe.
+      </p>
+      <button class="btn-primary" id="startBtn">
+        <span>Comenzar el viaje</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+      <span class="intro-footnote">JVKE · Golden Hour iniciará suavemente</span>
+    </div>
+  </div>
+
+  <!-- Contenedor Principal de la Experiencia -->
+  <main class="main-wrapper" id="mainContent">
+    
+    <!-- ENCABEZADO CINEMATOGRÁFICO (GOLDEN HOUR) -->
+    <header class="hero-section reveal">
+      <div class="golden-tagline">
+        <span class="tag-accent">es tu hora</span>
+        <span class="tag-sub">it's your golden hour</span>
+      </div>
+
+      <h1 class="hero-title">Tu Hora Dorada</h1>
+      <div class="hero-divider">
+        <span class="brush-stroke"></span>
+        <span class="gem">✦</span>
+        <span class="brush-stroke"></span>
+      </div>
+      <p class="hero-caption">Un adiós nacido desde el orgullo, la gratitud y la verdad.</p>
+    </header>
+
+    <!-- CUERPO DE LA CARTA (FLOTANTE SOBRE TUS RECUERDOS DIFUMINADOS) -->
+    <article class="letter-container">
+
+      <!-- Párrafo 1: El Gran Logro (Graduación Grado 11) -->
+      <section class="letter-card reveal">
+        <p class="letter-paragraph first-paragraph">
+          <span class="drop-cap">H</span>oy cierras una de las etapas más importantes y bonitas de tu vida: tu graduación de bachillerato. Verte cruzar esta meta, culminar tu grado once y estar lista para comerte el mundo me llena de un orgullo genuino. Sé las horas de esfuerzo, los días difíciles que superaste y todo lo que pusiste de ti para llegar a este momento. Te mereces cada aplauso, cada abrazo y cada una de las puertas que hoy comienzan a abrirse ante ti.
+        </p>
+      </section>
+
+      <!-- Párrafo 2: La Alegría de Coincidir -->
+      <section class="letter-card reveal">
+        <p class="letter-paragraph">
+          Mirando hacia atrás, me alegra inmensamente haber compartido una parte de este camino contigo. Me llevo los mejores recuerdos de esta etapa: las risas espontáneas, las pláticas largas que parecían no tener fin, los momentos divertidos y esos pequeños detalles de tu forma de ser que hacían que cualquier día común se sintiera especial. Coincidir contigo fue un regalo que me enseñó a valorar los momentos sencillos y a celebrar la dicha de ver crecer a alguien que estimo de verdad.
+        </p>
+      </section>
+
+      <!-- Cita Central (Luminosa y serena) -->
+      <section class="quote-card reveal">
+        <blockquote class="featured-quote">
+          Hay personas que llegan a tu vida para enseñarte a sonreír y recordarte que el camino vale la pena. Me voy con el corazón tranquilo, lleno de gratitud y deseándote lo mejor del mundo.
+        </blockquote>
+      </section>
+
+      <!-- Párrafo 3: Cierre Maduro (El paso al costado con dignidad) -->
+      <section class="letter-card reveal">
+        <p class="letter-paragraph">
+          La vida tiene sus propios ritmos y nos enseña que algunas historias son valiosas precisamente por el tiempo que compartieron, no por quedarse para siempre. Hoy que emprendes un rumbo nuevo, entiendo con total madurez y tranquilidad que nuestros caminos van hacia horizontes diferentes. Me retiro de tu historia sin reclamos ni nostalgias amargas, con la satisfacción de haber sido un buen compañero de viaje y con la paz de desearte siempre lo mejor.
+        </p>
+      </section>
+
+      <!-- Párrafo 4: Hacia su Futuro -->
+      <section class="letter-card reveal">
+        <p class="letter-paragraph">
+          Lo que viene para ti es enorme: vas a estudiar, a conocer nuevos mundos, a descubrir talentos que aún no imaginas y a construir la vida que sueñas. Mi único deseo es que seas inmensamente feliz, que confíes siempre en tu capacidad y que nunca pierdas esa chispa tan tuya que ilumina cualquier lugar.
+        </p>
+      </section>
+
+      <!-- Firma Final con Corazón Azul -->
+      <section class="signature-card reveal">
+        <p class="signature-intro">
+          Gracias por las risas, por la confianza y por la aventura de esta etapa.<br>
+          Hoy termina este capítulo, pero el libro de tu vida apenas comienza.
+        </p>
+        <p class="signature-intro" style="margin-top: 14px;">Con toda la admiración, el cariño y el respeto,</p>
+        <p class="signature-final">Hasta siempre... y que nunca dejes de brillar.</p>
+        <div class="signature-heart">
+          <span>💙</span>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- =====================================================================
+         NUESTRO LIBRO DE RECUERDOS (INSPIRADO EN EL ÁLBUM DE "UP")
+         ===================================================================== -->
+    <section class="scrapbook-section reveal" id="scrapbookSection">
+      
+      <h2 class="scrapbook-main-title">Nuestro Libro de Momentos</h2>
+      <p class="scrapbook-main-subtitle">
+        "Cada foto y cada segundo vivido forman parte de una aventura que siempre guardaré con honor."
+      </p>
+
+      <!-- MODOS DE VISUALIZACIÓN: HOJEAR LIBRO O VER TODO -->
+      <div class="scrapbook-controls-bar">
+        <div class="view-mode-toggles">
+          <button class="mode-btn active" id="btnModeBook">
+            <span>📖 Hojear el libro</span>
+          </button>
+          <button class="mode-btn" id="btnModeGrid">
+            <span>🖼️ Ver todas juntas</span>
+          </button>
+        </div>
+
+        <!-- Navegación de páginas del libro -->
+        <div class="page-navigation" id="pageNavigation">
+          <button class="nav-arrow-btn" id="btnPrevPage" aria-label="Página anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            <span>Anterior</span>
+          </button>
+          <span class="page-indicator" id="pageIndicator">Página 1 de 7</span>
+          <button class="nav-arrow-btn" id="btnNextPage" aria-label="Página siguiente">
+            <span>Siguiente</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- EL LIBRO FÍSICO / ÁLBUM KRAFT -->
+      <div class="scrapbook-container" id="scrapbookContainer">
+        
+        <!-- Cubierta de cuero y cordel (Portada del Libro) -->
+        <div class="scrapbook-book" id="scrapbookBook">
+          <!-- Páginas renderizadas por JS con esquinas negras, washi tape y sellos -->
+          <div class="scrapbook-page-spread" id="scrapbookSpread">
+            <!-- Contenido dinámico de la página actual -->
+          </div>
+        </div>
+
+        <!-- Vista alternativa en mosaico completo (oculta por defecto) -->
+        <div class="scrapbook-grid-view hidden" id="scrapbookGridView">
+          <!-- Todas las fotos y videos reunidos -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN DE CIERRE SIMBÓLICO: TU PRÓXIMO CAPÍTULO -->
+    <section class="farewell-action-section reveal">
+      <div class="action-card">
+        <div class="action-glow"></div>
+        <div class="adventure-stamp">
+          <span class="stamp-text">NUEVO HORIZONTE</span>
+        </div>
+        <h3 class="action-title">Tu Próximo Capítulo</h3>
+        <p class="action-desc">
+          El final de una hermosa etapa y el inicio de todo lo que vas a conquistar. Toca aquí para enviar los mejores deseos a tu nuevo camino.
+        </p>
+        <button class="btn-release" id="releaseBtn">
+          <span class="btn-icon">💙</span>
+          <span class="btn-text">Tu próximo capítulo</span>
+        </button>
+        <div class="released-message hidden" id="releasedMessage">
+          <div class="sparkles-anim">✨ 💙 ✨</div>
+          <p class="peace-quote">
+            "Que la vida te sorprenda con todo lo bueno que mereces. Ve y conquista tus sueños."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="experience-footer">
+      <p class="footer-text">Un adiós nacido desde la memoria, la gratitud y la verdad · Golden Hour</p>
+    </footer>
+
+  </main>
+
+  <!-- MODAL / LIGHTBOX PARA VER FOTOS Y VIDEOS EN PANTALLA COMPLETA -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Cerrar visor">&times;</button>
+      
+      <div class="lightbox-body" id="lightboxBody">
+        <!-- Imagen o Video grande -->
+      </div>
+
+      <div class="lightbox-caption" id="lightboxCaption">
+        <span class="caption-index" id="captionIndex"></span>
+        <span class="caption-name" id="captionName"></span>
+      </div>
+
+      <button class="lightbox-nav prev-btn" id="lightboxPrevBtn" aria-label="Elemento anterior">&#10094;</button>
+      <button class="lightbox-nav next-btn" id="lightboxNextBtn" aria-label="Elemento siguiente">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
